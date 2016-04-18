@@ -1,0 +1,22 @@
+SELECT * FROM Account
+SELECT * FROM AccountHolder
+SELECT * FROM AccountOwnership
+SELECT * FROM AccountLog
+SELECT * FROM Interest
+
+USE dv1454_ht14_7
+
+INSERT INTO Account(balance, name)
+VALUES (200, 'Master Account'),
+	   (100, 'Best Account Ever'),
+	   (400, 'Funtime Account')
+
+INSERT INTO AccountHolder(fName, lName, pinCode, street, city, birthDate)
+VALUES	('Chef', 'Chefsson', 1234, 'Chefsvägen 40', 'Cheftopia',  '19930430'),
+		('Vanlig', 'Människa', 1111, 'Alemedan', 'Karlskrona', '19910521'),
+		('Leif', 'Leifsson', 1212, 'Vägvägen 20', 'Leifstad', '18881224')
+
+INSERT INTO AccountOwnership(accountHolder_id, account_id)
+VALUES	(1, 1),
+		(2, 2),
+		(3, 3)
